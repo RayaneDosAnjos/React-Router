@@ -8,8 +8,6 @@ import Sobre from './components/Sobre'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
-
-
 function App() {
   return (
     <>
@@ -21,13 +19,14 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/aulas" element={<Aulas />} />
             <Route exact path="/sobre" element={<Sobre />} />
+            <Route exact path="*" render={()=><h1 style={{color:"red",width:"50px"}}>404 - Página não encontrada</h1>}/>
           </Routes>
-
+      
         </div>
       </Router>
     </>
 
-
+    
   );
 }
 
