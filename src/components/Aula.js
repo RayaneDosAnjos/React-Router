@@ -8,7 +8,7 @@ function useAula(){
     return data.filter(aula =>aula.id == id )[0]
 }
 
-export default function Aula(props){
+export default function Aula(){
     const aula = useAula()
 
     return(
