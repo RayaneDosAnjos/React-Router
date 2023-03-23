@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Home from './components/Home'
 import Aulas from './components/Aulas'
 import Sobre from './components/Sobre'
+import Aula from './components/Aula';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/aulas" element={<Aulas />} />
+            <Route exact path="/aulas/:id" element={<Aula />}/>
             <Route exact path="/sobre" element={<Sobre />} />
             <Route exact path="*" render={()=><h1 style={{color:"red",width:"50px"}}>404 - Página não encontrada</h1>}/>
           </Routes>
